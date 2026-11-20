@@ -1,0 +1,7 @@
+{
+  "198.51.100.10": {"country": "Germany", "regionName": "Hesse", "city": "Frankfurt am Main", "isp": "Example Hosting GmbH", "as": "AS64496 Example Net A", "timezone": "Europe/Berlin", "hosting": true, "proxy": false},
+  "198.51.100.20": {"country": "Singapore", "regionName": "Singapore", "city": "Singapore", "isp": "Example Cloud Pte", "as": "AS64498 Example Net C", "timezone": "Asia/Singapore", "hosting": true, "proxy": false},
+  "198.51.100.30": {"country": "United States", "regionName": "Ohio", "city": "Columbus", "isp": "Example Cloud LLC", "as": "AS64497 Example Net B", "timezone": "America/New_York", "hosting": true, "proxy": false},
+  "198.51.100.40": {"country": "Netherlands", "regionName": "North Holland", "city": "Amsterdam", "isp": "Example Telecom BV", "as": "AS64499 Example Net D", "timezone": "Europe/Amsterdam", "hosting": false, "proxy": false},
+  "203.0.113.5": {"country": "Netherlands", "regionName": "North Holland", "city": "Amsterdam", "isp": "Example Telecom BV", "as": "AS64499 Example Net D", "timezone": "Europe/Amsterdam", "hosting": false, "proxy": true}
+}

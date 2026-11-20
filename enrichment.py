@@ -5,6 +5,8 @@ import urllib.request
 from pathlib import Path
 
 CACHE_FILE = Path("data/ip_cache.json")
+DEMO_GEO_FILE = Path("data/demo_geo.json")
+GEO_FIELDS = "status,country,regionName,city,isp,as,timezone,hosting,proxy"
 
 
 def load_cache():
@@ -27,9 +29,10 @@ def fetch_json(url, headers=None):
 
 
 def lookup_geo(ip):
-    data = fetch_json(f"http://ip-api.com/json/{ip}?fields=status,country,city,isp")
+    data = fetch_json(f"http://ip-api.com/json/{ip}?fields={GEO_FIELDS}")
     if data and data.get("status") == "success":
-        return {"country": data["country"], "city": data["city"], "isp": data["isp"]}
+        data.pop("status")
+        return data
     return {}
 
 
@@ -46,7 +49,26 @@ def lookup_abuse(ip):
     return None
 
 
+def demo_info(ip):
+    if os.environ.get("LAB_DEMO_GEO") != "1" or not DEMO_GEO_FILE.exists():
+        return None
+    try:
+        if ipaddress.ip_address(ip).is_global:
+            return None
+    except ValueError:
+        return None
+    entry = json.loads(DEMO_GEO_FILE.read_text(encoding="utf-8")).get(ip)
+    if not entry:
+        return None
+    info = {"scope": "simulado", "simulated": True, **entry}
+    info["country"] = f"{entry.get('country', '?')} (simulado)"
+    return info
+
+
 def enrich_ip(ip, cache):
+    demo = demo_info(ip)
+    if demo:
+        return demo
     if ip in cache:
         return cache[ip]
     try:
