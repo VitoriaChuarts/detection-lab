@@ -93,3 +93,9 @@ Use `--apply` only on machines you own. Add your own IP to `data/allowlist.txt` 
 ## Tests
 
 `python3 -m pytest -v` runs 26 tests (rules, correlation, enrichment, response, reports, simulator, coverage, SIEM client).
+
+## Attacker profile card
+
+![Attacker card](docs/attacker-card.png)
+
+Shows location, ISP/ASN, datacenter/proxy flags, the attacker's local time next to yours, duration, ATT&CK techniques and severity. The IP is masked by default and the geolocation in this demo is simulated. IP geolocation is approximate and does not identify a person.
