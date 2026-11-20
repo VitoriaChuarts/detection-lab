@@ -1,0 +1,14 @@
+id: R004
+name: Ataque coordenado (força bruta + port scan)
+severity: critical
+correlation:
+  group_by: src_ip
+  window_seconds: 300
+  requires: [R003, R002]
+mitre:
+  - tactic: Credential Access
+    id: T1110
+    name: Brute Force
+  - tactic: Discovery
+    id: T1046
+    name: Network Service Discovery

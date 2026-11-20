@@ -1,0 +1,14 @@
+id: R003
+name: Força bruta SSH
+severity: high
+match:
+  source: honeypot
+  event_type: ssh_login_failed
+threshold:
+  count: 5
+  window_seconds: 120
+  group_by: src_ip
+mitre:
+  - tactic: Credential Access
+    id: T1110
+    name: Brute Force

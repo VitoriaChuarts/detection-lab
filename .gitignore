@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+.pytest_cache/
+reports/
+.env
+data/ip_cache.json
+data/response_log.jsonl
+data/simulated.jsonl
+data/coverage.json

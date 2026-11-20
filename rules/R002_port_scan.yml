@@ -1,0 +1,10 @@
+id: R002
+name: Port scan detectado
+severity: medium
+match:
+  source: nids
+  event_type: port_scan
+mitre:
+  - tactic: Discovery
+    id: T1046
+    name: Network Service Discovery

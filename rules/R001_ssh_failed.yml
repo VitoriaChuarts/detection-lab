@@ -1,0 +1,10 @@
+id: R001
+name: Falha de login SSH
+severity: low
+match:
+  source: honeypot
+  event_type: ssh_login_failed
+mitre:
+  - tactic: Credential Access
+    id: T1110
+    name: Brute Force
