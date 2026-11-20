@@ -100,32 +100,3 @@ Use `--apply` only on machines you own. Add your own IP to `data/allowlist.txt` 
 
 Shows location, ISP/ASN, datacenter/proxy flags, the attacker's local time next to yours, duration, ATT&CK techniques and severity. The IP is masked by default and the geolocation in this demo is simulated. IP geolocation is approximate and does not identify a person.
 
-## Attacker profile card
-
-```bash
-LAB_DEMO_GEO=1 python3 attacker_card.py 198.51.100.30
-```
-
-Shows location, ISP/ASN, datacenter/proxy flags, the attacker's local time next to yours, duration, ATT&CK techniques and severity. The IP is masked by default. The demo uses **simulated** geolocation for reserved test IPs (always labeled "simulado"); real lookups work for public IPs. IP geolocation is approximate and does not identify a person.
-
-![Attacker card](docs/attacker-card.png)
-
-## Attacker profile card
-
-```bash
-LAB_DEMO_GEO=1 python3 attacker_card.py 198.51.100.30
-```
-
-Shows location, ISP/ASN, datacenter/proxy flags, the attacker's local time next to yours, duration, ATT&CK techniques and severity. The IP is masked by default. The demo uses **simulated** geolocation for reserved test IPs (always labeled "simulado"); real lookups work for public IPs. IP geolocation is approximate and does not identify a person.
-
-![Attacker card](docs/attacker-card.png)
-
-## Attacker profile card
-
-```bash
-LAB_DEMO_GEO=1 python3 attacker_card.py 198.51.100.30
-```
-
-Shows location, ISP/ASN, datacenter/proxy flags, the attacker's local time next to yours, duration, ATT&CK techniques and severity. The IP is masked by default. The demo uses **simulated** geolocation for reserved test IPs (always labeled "simulado"); real lookups work for public IPs. IP geolocation is approximate and does not identify a person.
-
-![Attacker card](docs/attacker-card.png)
